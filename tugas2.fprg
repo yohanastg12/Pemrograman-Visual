@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-29 08:32:39 PM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtTkNIM0ZWMUQ7MjAyMi0wOS0yOTsxMDozNzo0NSBBTTsyNzQw"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtTkNIM0ZWMUQ7MjAyMi0wOS0yOTswODozMjozOSBQTTs3OzI4NzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ISBN" type="String" array="False" size=""/>
+            <input variable="ISBN"/>
+            <declare name="judul" type="String" array="False" size=""/>
+            <input variable="judul"/>
+            <declare name="penulis" type="String" array="False" size=""/>
+            <input variable="penulis"/>
+            <declare name="tahunTerbit" type="String" array="False" size=""/>
+            <input variable="tahunTerbit"/>
+            <declare name="penerbit" type="String" array="False" size=""/>
+            <input variable="penerbit"/>
+            <declare name="formatBuku" type="String" array="False" size=""/>
+            <input variable="formatBuku"/>
+            <declare name="HargaPembelian" type="Real" array="False" size=""/>
+            <input variable="HargaPembelian"/>
+            <declare name="MM" type="Real" array="False" size=""/>
+            <input variable="MM"/>
+            <declare name="stok" type="Integer" array="False" size=""/>
+            <input variable="Stok"/>
+            <declare name="rating" type="Real" array="False" size=""/>
+            <input variable="rating"/>
+            <declare name="ratingPick" type="String" array="False" size=""/>
+            <assign variable="ratingPick" expression="&quot;&quot;"/>
+            <if expression="rating&gt;=4.7">
+                <then>
+                    <assign variable="ratingPick" expression="&quot;Best Pick&quot;"/>
+                </then>
+                <else>
+                    <if expression="rating&gt;=4.5">
+                        <then>
+                            <assign variable="ratingPick" expression="&quot;Must Read&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="rating&gt;=4.0">
+                                <then>
+                                    <assign variable="ratingPick" expression="&quot;Recommended&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="rating&gt;=3.0">
+                                        <then>
+                                            <assign variable="ratingPick" expression="&quot;Avarage&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="rating&lt;=3.0">
+                                                <then>
+                                                    <assign variable="ratingPick" expression="&quot;low&quot;"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="ISBN&amp;&quot;|&quot;&amp;judul&amp;&quot;|&quot;&amp;penulis&amp;&quot;|&quot;&amp;tahunTerbit&amp;&quot;|&quot;&amp;penerbit&amp;&quot;|&quot;&amp;formatBuku&amp;&quot;|&quot;&amp;hargaPembelian&amp;&quot;|&quot;&amp;MM&amp;&quot;|&quot;&amp;stok&amp;&quot;|&quot;&amp;rating&amp;&quot;|&quot;&amp;ratingPick" newline="True"/>
+            <assign variable="" expression=""/>
+        </body>
+    </function>
+</flowgorithm>
